@@ -61,9 +61,34 @@ if (jawab.equalsIgnoreCase("ya")){
 }else {
 // jawab tidak 
 System.out.println("Selamat datang di toko kami! Silakan berbelanja.");
+jawab=scanner.nextLine();
+
+if (jawab.equalsIgnoreCase("ya")){
+        System.out.println("Masukkan nama barang: ");
+        namaBarang = scanner.nextLine();
+        System.out.println("Masukkan harga barang: ");
+        harga = scanner.nextDouble();
+        System.out.println("Masukkan jumlah barang: ");
+        jumlah = scanner.nextDouble();
+
+System.out.println();
+
+  total = harga * jumlah;
+        System.out.println("Total harga: " + total);
+        //hitung diskon
+        if (total>=100000.0) {
+            diskon = total * 0.05 ; // 5% discount
+        } else if (total >= 300000.0) {
+            diskon = total * 0.10; // 10% discount
+        } else {
+            diskon = 0.0; // no discount
+        }
+        grandTotal = total - diskon;
+        System.out.println("Diskon: " + diskon);
+        System.out.println("Grand Total: " + grandTotal);
 
 }
-
+}
 
 
 

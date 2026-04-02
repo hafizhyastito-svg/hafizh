@@ -17,9 +17,13 @@ public class menghitungIP {
         sks = 22;
     } else if (ips >= 2.00 && ips <= 2.99) {
         sks = 20;
-    } else if (ips < 2.00) {
-        sks = 18;}
-
+    } else if (ips < 2.00 && ips >= 1.00) {
+        sks = 18;
+    } else if (ips < 1.00 && ips >= 0.00) {
+        System.out.println("Selamat anda di DO.");
+    } else {
+        System.out.println("IPS tidak valid.");
+    }
     System.out.println("Jumlah SKS yang dapat diambil: " + sks);
     scanner.close();
 }

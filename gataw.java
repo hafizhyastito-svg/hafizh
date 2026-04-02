@@ -58,12 +58,6 @@ if (jawab.equalsIgnoreCase("ya")){
     }
     
         
-}else {
-// jawab tidak 
-System.out.println("Selamat datang di toko kami! Silakan berbelanja.");
-
-}
-
 
 
 

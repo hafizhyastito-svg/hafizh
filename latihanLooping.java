@@ -36,6 +36,7 @@ System.out.println("1+2+3+4+5+6+7+8+9+10 = " + hello);
 
 
 do {
+
 int jumlah = 0;
 System.out.println(barang="Masukkan nama barang: ");
 int harga = scanner.nextInt();
@@ -43,7 +44,10 @@ System.out.println("Masukkan jumlah barang: ");
 String barang = "";
 System.out.println("Total harga: " + (harga * jumlah));
 
-    } while
+    while{
+(jumla)
+    }
+
 scanner.close();
 
 }

@@ -1,35 +1,29 @@
 import java.util.Scanner;
 public class kuisLooping {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-int totalBuku = 0;
-int jumlahBuku;
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int totalBuku = 0;
+    int jumlahBuku;
 
-do {
-    System.out.print("Masukkann jumlah buku yang dipinjam: ");
-    jumlahBuku = sc.nextInt();
-    System.out.println( );
-
-    if (jumlahBuku <= 0){
-        System.out.println("Maaf input tidak valid. Jumlah buku harus lebih dari 0.");
-    
-    } else {
-        totalBuku += jumlahBuku;
-        System.out.println("Jumlah buku yang dipinjam: " + jumlahBuku + " buku");
-        System.out.println("Total sementara: " + totalBuku + " buku");
+    do {
+        System.out.println("Masukkan 0 untuk berhenti");
+        System.out.print("Jumlah buku yang dipinjam: ");
+        jumlahBuku = sc.nextInt();
+        if (jumlahBuku < 0){
+            System.out.println( );
+            System.out.println("Jumlah buku tidak boleh negatif");
+            System.out.println( );
+            System.out.println("Total sementara buku yang dipinjam: " + totalBuku + " Buku");
+    } else if (jumlahBuku == 0){
+            System.out.println( );
+            System.out.println("Input selesai");
+    } else if (jumlahBuku > 0) {
+            totalBuku += jumlahBuku;
+            System.out.println( );
+            System.out.println("Total sementara buku yang dipinjam: " + totalBuku + " Buku");
     }
-    System.out.println( );
-System.out.println("Apakah Anda ingin memasukkan jumlah buku lagi? (ya/tidak)");
-String jawab = sc.next();
-System.out.println( );
-if (jawab.equalsIgnoreCase("tidak")) {
-    break;
-}
-    } while (true);
-    System.out.println("Total buku yang dipinjam: " + totalBuku + " buku");
-    sc.close();
-}
 
-
-
+    } while (jumlahBuku != 0);
+    System.out.println("Total buku yang dipinjam: " + totalBuku + " Buku");
+}    
 }

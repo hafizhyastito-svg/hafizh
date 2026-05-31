@@ -28,10 +28,10 @@ public class ujianTengahSemester {
                 nominalPulsa = 25000;
             } else if (nominalPulsa == 3 ) {
                 nominalPulsa = 50000;
-                nominalPulsa = (int) (nominalPulsa * 0.90); // Menghitung 90% dari nominal pulsa
+// Menghitung 90% dari nominal pulsa
             } else if (nominalPulsa == 4 ) {
                 nominalPulsa = 100000;
-                nominalPulsa = (int) (nominalPulsa * 0.85); // Menghitung 85% dari nominal pulsa
+       // Menghitung 85% dari nominal pulsa
             } else {    
                 System.out.println("Nominal pulsa tidak valid. Silakan coba lagi!");
                continue; // Melanjutkan ke iterasi berikutnya jika input tidak valid
@@ -63,13 +63,13 @@ public class ujianTengahSemester {
             System.out.println("\n--- Data Pembeli " + (i + 1) + " ---");
             System.out.println("Nama Provider: " + daftarPembeli[i]);
             System.out.println("Jenis Paket: " + namaPaket);
-            if (nominalPulsa >=50000) {
-                System.out.println("Nominal Pulsa + Biaya Admin 2000: dan diskon 10% : " + (nominalPulsa + 2000));
+            if (nominalPulsa >=50000 && nominalPulsa < 100000) {
+                System.out.println("Nominal Pulsa + Diskon 10% + Biaya Admin 2000 : " + ((nominalPulsa * 0.90) + 2000));
             } else if (nominalPulsa >= 100000) {
-                System.out.println("Nominal Pulsa + Biaya Admin 2000 dan Diskon 15% : " + (nominalPulsa + 2000));
+                System.out.println("Nominal Pulsa + Diskon 15% + Biaya Admin 2000 : " + ((nominalPulsa * 0.85) + 2000));
             }
                 else {
-                    System.out.println("Nominal Pulsa: " + nominalPulsa);
+                    System.out.println("Nominal Pulsa + Biaya Admin 2000 : " + ((nominalPulsa * 1.0) + 2000));
                 }
         }
 
